@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ansil">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd Or Even Checker</title>
+</head>
+<body>
+
+    <script>
+        function OddOrEven() {
+            var numberInput = document.myform.numberInput.value;
+            var isOddOrEven = (numberInput % 2 == 0) ? "Even" : "Odd";
+            document.getElementById("isOddOrEven").innerText = 'The entered number is ' + isOddOrEven;
+        }
+    </script>
+
+    <center>
+        <form name="myform"><br><br>
+            <label for="numberInput">Enter a Number:</label>
+            <input type="number" id="numberInput" name="numberInput"><br><br>
+            <input type="button" value="Check Odd/Even" onclick="OddOrEven()"><br>
+            <br>
+            <div id="isOddOrEven"></div>
+        </form>
+    </center>
+    
+</body>
+</html>
